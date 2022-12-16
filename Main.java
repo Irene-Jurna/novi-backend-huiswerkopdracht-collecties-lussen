@@ -9,7 +9,7 @@ public class Main {
         String ongeldig = "ongeldige invoer";
 
         Scanner scanner = new Scanner(System.in);
-        Translator translate = new Translator(alphabetic, numeric);
+        Translator translator = new Translator(alphabetic, numeric);
 
         while (play) {
             System.out.println("Type 'x' om te stoppen \nType 'v' om te vertalen");
@@ -21,7 +21,7 @@ public class Main {
                 int number = scanner.nextInt();
                 scanner.nextLine();
                 if (number < 10) {
-                    String result = Translator.translate(number);
+                    String result = translator.translate(number);
                     System.out.println("De vertaling van " + number + " is " + result);
                 } else {
                     System.out.println(ongeldig);
